@@ -1,0 +1,54 @@
+:root {
+    --main-bg: #fff;
+    --text-color: #222;
+    --accent: var(--color-verde);
+  }
+  
+  body, html {
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-bg);
+  }
+  
+  .todo-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-bg);
+    animation: fadeIn 1.2s ease-in-out;
+  }
+  
+  .loading-title {
+    font-size: 5rem;
+    color: var(--text-color);
+    text-align: center;
+    animation: pulse 1.5s infinite ease-in-out;
+  }
+  
+  /* Animación de aparición */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(25px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Simula una carga */
+  @keyframes pulse {
+    0% {
+      opacity: 0.4;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.4;
+    }
+  }
+  
