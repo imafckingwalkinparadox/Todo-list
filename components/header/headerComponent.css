@@ -1,18 +1,38 @@
 header {
     display: grid;
-    grid-template-columns: 1fr 20rem auto;
+    grid-template-columns: 1fr auto auto;
     align-items: center;
-    gap: 1rem;
+    gap: 7rem;
+    padding: 1.5rem 1rem;
+    font-family: monospace;
+    border-bottom: 1px solid #aaa;
 }
 
-.div-tareas{
-    max-width: 30rem;
-    height: 100%;
+h1 {
+    font-weight: 500;
+    font-size: 2rem;
 }
 
-.div-logo-user{
-    width: 4rem;
-    height: 4rem;
-    border-radius: 100%;
+.div-tareas {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 2rem;
+}
+
+
+.cantidad-tareas {
+    border: 1px solid #000;
+    border-radius: 8px;
+    padding: 0 0.5rem;
+    font-size: 2rem;
+}
+
+.div-logo-user {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
     border: 1px solid black;
+    background-color: transparent;
+
 }
