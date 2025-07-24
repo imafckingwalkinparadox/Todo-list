@@ -25,5 +25,9 @@ export function header(){
     divLogo_User.className = "div-logo-user";
     header.appendChild(divLogo_User);
 
+    let img_Logo = document.createElement('img');
+    img_Logo.src = "https://cdn-icons-png.flaticon.com/512/6326/6326055.png";
+    img_Logo.className = "Logotipo";
+    divLogo_User.appendChild(img_Logo);
     return header;
 }
