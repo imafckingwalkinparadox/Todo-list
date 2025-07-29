@@ -1,0 +1,26 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f2f2f2;
+    border-top: 1px solid #ccc;
+}
+
+.github-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+    gap: 0.5rem;
+}
+
+.github-logo {
+    width: 24px;
+    height: 24px;
+}
+
+.github-text {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
