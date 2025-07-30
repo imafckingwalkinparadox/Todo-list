@@ -1,13 +1,26 @@
 import { header } from "../components/header/headerComponent.js";
 import { footer } from "../components/footer/footerComponent.js";
+import { informacion } from "../components/informacion/infoComponent.js";
+import { tarea } from "../components/tareas/tareaComponent.js";
+
+
+
 export function dashboard(){
-    let seccion = document.createElement('section');
+    let dashboard = document.createElement('section');
+    dashboard.className = "dashboard";
 
-    seccion.appendChild(header())
+    dashboard.appendChild(header());
 
-    seccion.appendChild(footer())
+    let section1 = document.createElement('section');
+    section1.className = "section-1";
+    section1.appendChild(informacion());
+    section1.appendChild(tarea());
+    dashboard.appendChild(section1);
 
-    return seccion;
+    dashboard.appendChild(footer());
+
+
+    return dashboard;
 }
 
 document.body.appendChild(dashboard());

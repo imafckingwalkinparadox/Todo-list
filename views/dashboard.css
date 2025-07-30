@@ -1,0 +1,14 @@
+.dashboard{
+    height: 100vh;
+
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+.section-1{
+    display: grid;
+    grid-template-columns: 75% 25%;
+
+    padding: 1rem;
+    gap: 7px;
+}
