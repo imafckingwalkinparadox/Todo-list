@@ -13,8 +13,8 @@ export function dashboard(){
 
     let section1 = document.createElement('section');
     section1.className = "section-1";
-    section1.appendChild(informacion());
     section1.appendChild(tarea());
+    section1.appendChild(informacion());
     dashboard.appendChild(section1);
 
     dashboard.appendChild(footer());
