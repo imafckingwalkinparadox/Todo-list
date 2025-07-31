@@ -13,7 +13,39 @@ export function dashboard(){
 
     let section1 = document.createElement('section');
     section1.className = "section-1";
-    section1.appendChild(tarea());
+    section1.appendChild(tarea(
+        [
+            {
+                titulo: "Proyecto de Ciencias",
+                estado: "En progreso",
+                fechaAs: "01/01/2025",
+                fechaEn: "31/01/2025",
+                listaIntegrantes: ["🙂", "😊", "😎"]
+            },
+            {
+                titulo: "Proyecto de Matematicas",
+                estado: "Terminado",
+                fechaAs: "01/01/2025",
+                fechaEn: "31/01/2025",
+                listaIntegrantes: ["🤓", "😅", "😺"]
+            },
+            {
+                titulo: "Proyecto de Programacion",
+                estado: "En progreso",
+                fechaAs: "01/01/2025",
+                fechaEn: "31/01/2025",
+                listaIntegrantes: ["🧐", "😄", "🤠"]
+            },
+            {
+                titulo: "Tarea de Biologia",
+                estado: "Pendiente",
+                fechaAs: "01/01/2025",
+                fechaEn: "31/01/2025",
+                listaIntegrantes: ["🧐", "😄", "🤠"] 
+            }
+        ]
+
+    ));
     const info = {
         indice: 1,
         descripcion: "Hacer maqueta de volcanes.",
