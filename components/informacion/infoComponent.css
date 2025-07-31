@@ -1,3 +1,72 @@
-.div-info{
-    border: 3px solid red;
+.div-info {
+    background-color: #f0f8ff;
+    padding: 1.5rem;
+    margin: 1rem auto;
+    width: 90%;
+    max-width: 800px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    font-family: sans-serif;
+}
+
+.botones-info {
+    display: flex;
+    justify-content: end;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.btn-info {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 6px;
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contenedor-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.info-indice {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.info-titulo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #222;
+}
+
+.info-descripcion {
+    font-size: 1rem;
+    color: #555;
+}
+
+.info-estado {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #006400;
+}
+
+.info-fechas {
+    display: flex;
+    justify-content: space-between;
+    color: #444;
+    font-size: 0.9rem;
+}
+
+.info-integrantes {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+}
+
+.emoji-integrante {
+    margin-left: 0.3rem;
+    font-size: 1.2rem;
 }
