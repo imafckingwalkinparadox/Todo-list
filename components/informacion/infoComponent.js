@@ -1,8 +1,9 @@
+import { crearFormulario } from '../formulario/formularioComponent.js';
+
 export function informacion(info) {
     let div = document.createElement('div');
     div.className = "div-info";
 
-    // Botones superiores
     const botones = document.createElement('div');
     botones.className = "botones-info";
 
@@ -18,31 +19,31 @@ export function informacion(info) {
     botones.appendChild(btnArchivados);
     div.appendChild(botones);
 
-    // Contenedor principal de la info
+btnAgregar.addEventListener('click', () => {
+    const formulario = crearFormulario();
+    div.appendChild(formulario);
+});
+
+
     const contenedor = document.createElement('div');
     contenedor.className = "contenedor-info";
 
-    // Índice
     let indice = document.createElement('h2');
     indice.className = "info-indice";
     indice.textContent = "Tarea #" + info.indice;
 
-    // Título
     let titulo = document.createElement('h3');
     titulo.className = "info-titulo";
     titulo.textContent = info.titulo;
 
-    // Descripción
     let descripcion = document.createElement('p');
     descripcion.className = "info-descripcion";
     descripcion.textContent = info.descripcion;
 
-    // Estado
     let estado = document.createElement('span');
     estado.className = "info-estado";
     estado.textContent = "Estado: " + info.estado;
 
-    // Fechas
     const fechas = document.createElement('div');
     fechas.className = "info-fechas";
 
@@ -57,7 +58,6 @@ export function informacion(info) {
     fechas.appendChild(fechaAs);
     fechas.appendChild(fechaEn);
 
-    // Integrantes
     let integrantes = document.createElement('div');
     integrantes.className = "info-integrantes";
     integrantes.textContent = "Integrantes: ";
@@ -69,7 +69,6 @@ export function informacion(info) {
         integrantes.appendChild(span);
     });
 
-    // Agregar al contenedor
     contenedor.appendChild(indice);
     contenedor.appendChild(titulo);
     contenedor.appendChild(descripcion);

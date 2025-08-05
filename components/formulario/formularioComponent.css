@@ -1,0 +1,39 @@
+.formulario-container {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: #f4f4f4;
+    width: 250px;
+}
+
+.formulario-tarea {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.formulario-tarea input,
+.formulario-tarea select,
+.formulario-tarea button {
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.formulario-tarea button {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.formulario-tarea button:hover {
+    background-color: #45a049;
+}
+
+.formulario-tarea textarea {
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: vertical;
+}
