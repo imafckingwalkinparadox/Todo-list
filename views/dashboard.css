@@ -12,3 +12,57 @@
     padding: 1rem;
     gap: 7px;
 }
+
+@media (min-width: 577px) and (max-width: 700px){
+    .section-1{
+        grid-template-columns: auto;
+    
+    }
+     
+}
+  
+  /* Teléfonos normales (hasta 480px) */
+  @media (max-width: 480px) {
+    /* Estilos para la mayoría de smartphones */
+  }
+  
+  /* Teléfonos grandes (hasta 576px) */
+  @media (max-width: 576px) {
+    /* Estilos para smartphones grandes */
+  }
+  
+  /* Tabletas en vertical (hasta 768px) */
+  @media (max-width: 768px) {
+    /* Estilos para tabletas verticales */
+  }
+  
+  /* Tabletas en horizontal (hasta 992px) */
+  @media (max-width: 992px) {
+    /* Estilos para tabletas horizontales y pantallas medianas */
+  }
+  
+  /* Laptops pequeños (hasta 1024px) */
+  @media (max-width: 1024px) {
+    /* Estilos para laptops pequeños */
+  }
+  
+  /* Escritorio estándar (hasta 1200px) */
+  @media (max-width: 1200px) {
+    /* Estilos para pantallas de escritorio comunes */
+  }
+  
+  /* Escritorio grande (desde 1201px) */
+  @media (min-width: 1201px) {
+    /* Estilos para pantallas grandes */
+  }
+  
+  /* Escritorios Full HD o mayores (desde 1440px) */
+  @media (min-width: 1440px) {
+    /* Estilos para pantallas muy grandes o monitores anchos */
+  }
+  
+  /* Pantallas 4K (desde 1920px) */
+  @media (min-width: 1920px) {
+    /* Estilos para pantallas 4K */
+  }
+  
