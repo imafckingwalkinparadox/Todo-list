@@ -1,4 +1,11 @@
-export function itemTarea(indice, titulo, estado, fechaAs = "01/01/2025", fechaEn = "31/01/2025", listaIntegrantes = ["🙂", "😊", "😎"]) {
+export function itemTarea(
+    indice, 
+    titulo, 
+    estado, 
+    fechaAs = "01/01/2025", 
+    fechaEn = "31/01/2025", 
+    listaIntegrantes = ["🙂", "😊", "😎"]
+){
     let div = document.createElement('div');
     div.className = "item-tarea";
 

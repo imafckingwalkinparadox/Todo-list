@@ -3,66 +3,38 @@ import { footer } from "../components/footer/footerComponent.js";
 import { informacion } from "../components/informacion/infoComponent.js";
 import { tarea } from "../components/tareas/tareaComponent.js";
 
+export async function dashboard() {
+    
+    try {
+        const resultado = await fetch("http://localhost:3000/tareas");
+        const datos = await resultado.json();
+        let tareasDb = datos;
+        console.log(tareasDb);
+
+        let dashboard = document.createElement('section');
+        dashboard.className = "dashboard";
+
+        dashboard.appendChild(header());
+
+        let section1 = document.createElement('section');
+        section1.className = "section-1";
+        //section1.appendChild(tarea(tareasDb));
+
+        //section1.appendChild(informacion(tareasDb[0]));
+        dashboard.appendChild(section1);
+
+        dashboard.appendChild(footer());
 
 
-export function dashboard(){
-    let dashboard = document.createElement('section');
-    dashboard.className = "dashboard";
+        return dashboard;
 
-    dashboard.appendChild(header());
-
-    let section1 = document.createElement('section');
-    section1.className = "section-1";
-    section1.appendChild(tarea(
-        [
-            {
-                titulo: "Proyecto de Ciencias",
-                estado: "En progreso",
-                fechaAs: "01/01/2025",
-                fechaEn: "31/01/2025",
-                listaIntegrantes: ["🙂", "😊", "😎"]
-            },
-            {
-                titulo: "Proyecto de Matematicas",
-                estado: "Terminado",
-                fechaAs: "01/01/2025",
-                fechaEn: "31/01/2025",
-                listaIntegrantes: ["🤓", "😅", "😺"]
-            },
-            {
-                titulo: "Proyecto de Programacion",
-                estado: "En progreso",
-                fechaAs: "01/01/2025",
-                fechaEn: "31/01/2025",
-                listaIntegrantes: ["🧐", "😄", "🤠"]
-            },
-            {
-                titulo: "Tarea de Biologia",
-                estado: "Pendiente",
-                fechaAs: "01/01/2025",
-                fechaEn: "31/01/2025",
-                listaIntegrantes: ["🧐", "😄", "🤠"] 
-            }
-        ]
-
-    ));
-    const info = {
-        indice: 1,
-        descripcion: "Hacer maqueta de volcanes.",
-        titulo: "Proyecto Ciencias",
-        estado: "Completado",
-        fechaAs: "01/01/2025",
-        fechaEn: "31/01/2025",
-        listaIntegrantes: ["🙂", "😊", "😎"]
-    };
-
-    section1.appendChild(informacion(info));
-    dashboard.appendChild(section1);
-
-    dashboard.appendChild(footer());
-
-
-    return dashboard;
+    } catch (error) {
+        console.error("Error: ", error);
+    }
 }
 
-document.body.appendChild(dashboard());
+dashboard().then(elemento => {
+    document.body.appendChild(elemento);
+})
+
+
