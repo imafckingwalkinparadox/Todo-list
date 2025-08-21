@@ -1,82 +1,67 @@
-import { crearFormulario } from '../formulario/formularioComponent.js';
-
-export function informacion(info) {
-    let div = document.createElement('div');
-    div.className = "div-info";
-
-    const botones = document.createElement('div');
-    botones.className = "botones-info";
-
-    const btnAgregar = document.createElement('button');
-    btnAgregar.textContent = "+ Tarea";
-    btnAgregar.className = "btn-info";
-
-    const btnArchivados = document.createElement('button');
-    btnArchivados.textContent = "Archivados";
-    btnArchivados.className = "btn-info";
-
-    botones.appendChild(btnAgregar);
-    botones.appendChild(btnArchivados);
-    div.appendChild(botones);
-
-btnAgregar.addEventListener('click', () => {
-    const formulario = crearFormulario();
-    div.appendChild(formulario);
-});
-
-
-    const contenedor = document.createElement('div');
-    contenedor.className = "contenedor-info";
-
-    let indice = document.createElement('h2');
-    indice.className = "info-indice";
-    indice.textContent = "Tarea #" + info.indice;
-
-    let titulo = document.createElement('h3');
-    titulo.className = "info-titulo";
-    titulo.textContent = info.titulo;
-
-    let descripcion = document.createElement('p');
-    descripcion.className = "info-descripcion";
-    descripcion.textContent = info.descripcion;
-
-    let estado = document.createElement('span');
-    estado.className = "info-estado";
-    estado.textContent = "Estado: " + info.estado;
-
-    const fechas = document.createElement('div');
-    fechas.className = "info-fechas";
-
-    const fechaAs = document.createElement('span');
-    fechaAs.className = "info-fechaAs";
-    fechaAs.textContent = "Asignado: " + info.fechaAs;
-
-    const fechaEn = document.createElement('span');
-    fechaEn.className = "info-fechaEn";
-    fechaEn.textContent = "Entrega: " + info.fechaEn;
-
-    fechas.appendChild(fechaAs);
-    fechas.appendChild(fechaEn);
-
-    let integrantes = document.createElement('div');
-    integrantes.className = "info-integrantes";
-    integrantes.textContent = "Integrantes: ";
-
-    info.listaIntegrantes.forEach((emoji) => {
-        let span = document.createElement('span');
-        span.className = "emoji-integrante";
-        span.textContent = emoji;
-        integrantes.appendChild(span);
-    });
-
-    contenedor.appendChild(indice);
-    contenedor.appendChild(titulo);
-    contenedor.appendChild(descripcion);
-    contenedor.appendChild(estado);
-    contenedor.appendChild(fechas);
-    contenedor.appendChild(integrantes);
-
-    div.appendChild(contenedor);
-
+export function informacion(tarea) {
+    const div = document.createElement("div");
+    div.className = "contenedor-informacion";
+  
+    // Botones
+    const divBotones = document.createElement("div");
+    divBotones.className = "div-botones";
+  
+    const btnTarea = document.createElement("button");
+    btnTarea.className = "btn-tarea";
+    btnTarea.innerText = "+ Tarea";
+  
+    const btnArchivados = document.createElement("button");
+    btnArchivados.className = "btn-archivados";
+    btnArchivados.innerText = "Archivados";
+  
+    divBotones.append(btnTarea, btnArchivados);
+  
+    // Información de la tarea
+    const divInformacion = document.createElement("div");
+    divInformacion.className = "div-informacion";
+  
+    // Estado
+    const divEstado = document.createElement("div");
+    divEstado.className = `estado-tarea ${tarea.estado_tarea
+      .toLowerCase()
+      .replace(" ", "-")}`;
+    divEstado.innerText = tarea.estado_tarea;
+  
+    // Título
+    const titulo = document.createElement("h3");
+    titulo.className = "titulo-asignacion";
+    titulo.innerText = tarea.nombre;
+  
+    // Descripción
+    const descripcion = document.createElement("p");
+    descripcion.className = "descripcion-asignacion";
+    descripcion.innerText = tarea.descripcion;
+  
+    // Texto integrantes
+    const spanIntegrantes = document.createElement("span");
+    spanIntegrantes.className = "texto-integrantes";
+    spanIntegrantes.innerText = "Integrantes";
+  
+    // Contenedor integrantes
+    const divIntegrantes = document.createElement("div");
+    divIntegrantes.className = "div-integrantes";
+  
+  /*   tarea.integrantes.forEach((icono) => {
+      const divIcono = document.createElement("div");
+      divIcono.className = "integrante";
+      divIcono.innerText = icono;
+      divIntegrantes.appendChild(divIcono);
+    }); */
+  
+    divInformacion.append(
+      divEstado,
+      titulo,
+      descripcion,
+      spanIntegrantes
+    );
+  
+    div.append(divBotones, divInformacion);
+  
     return div;
-}
+  }
+  

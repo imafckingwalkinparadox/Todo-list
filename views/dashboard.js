@@ -18,9 +18,9 @@ export async function dashboard() {
 
         let section1 = document.createElement('section');
         section1.className = "section-1";
-        //section1.appendChild(tarea(tareasDb));
+        section1.appendChild(tarea(tareasDb));
+        section1.appendChild(informacion(tareasDb[0]))
 
-        //section1.appendChild(informacion(tareasDb[0]));
         dashboard.appendChild(section1);
 
         dashboard.appendChild(footer());
